@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>Login Page</h2>
+
+    <form action="/login" method="POST" onsubmit="return validateForm()">
+
+        <input type="text" name="username" id="username" placeholder="Username">
+
+        <input type="password" name="password" id="password" placeholder="Password">
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p id="result">{{ message if message else "" }}</p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
